@@ -17,7 +17,7 @@ To accomplish this manually, you would need to search for each tag and each poss
 ## Place Holders
 
 | Place Holder | Description |
-|==============|=============|
+|--------------|-------------|
 | `{input_tag}` | The specified input tag which brought found this item for processing by this script. Note that this place holder is not required. |
 | `{type}` | The item's type name as obtained by `ItemType.getLocalisedName` |
 | `{mime_type}` | The item's mime type as obtained by `ItemType.getName` |
@@ -39,7 +39,7 @@ To accomplish this manually, you would need to search for each tag and each poss
 These are less useful in this context, but underlying PlaceholderResolver can resolve them, so they are documented here for completeness:
 
 | Place Holder | Description |
-|==============|=============|
+|--------------|-------------|
 | `{guid}` | The item's GUID. |
 | `{guid_prefix}` | Characters 0-2 of the item's GUID. Useful for creating sub-groupings based on GUID. |
 | `{guid_infix}` | Characters 3-5 of the item's GUID. Useful for creating sub-groupings based on GUID. |
