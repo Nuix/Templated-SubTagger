@@ -7,7 +7,7 @@ View the GitHub project [here](https://github.com/Nuix/Templated-SubTagger) or d
 
 # Overview
 
-Imagine that you have a review process that tags items in a Nuix case that are relevant with a tag named "Relevant".  Now you would like to apply sub-tags based upon the kind of the tagged items:
+Imagine that you have a review process that tags items in a Nuix case that are relevant with a tag named `Relevant`.  Now you would like to apply sub-tags based upon the kind of the tagged items:
 - `Relevant|Emails`
 - `Relevant|Containers`
 - `Relevant|Chat Conversations`
