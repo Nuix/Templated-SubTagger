@@ -35,6 +35,8 @@ To accomplish this manually, you would need to search for each tag and each poss
 | `{top_level_kind}` | The kind (via `ItemType.getKind.getName`) of the provided item's top level item or **ABOVE_TOP_LEVEL** for items which are above top level. |
 | `{original_extension}` | The original extension as obtained from Nuix via `Item.getOriginalExtension` or **NO_ORIGINAL_EXTENSION** for items where Nuix does not have an original extension value. |
 | `{corrected_extension}` | The corrected extension as obtained from Nuix via `Item.getCorrectedExtension` or **NO_CORRECTED_EXTENSION** for items where Nuix does not have a corrected extension value. |
+| `{case_id}`    | The value obtained by calling `Item.getCaseId` which "Gets the case ID for the simple case that processed this item". |
+| `{case_name}` | The value obtained by calling `Item.getCaseName` which gets the name of the simple case the item belongs to. |
 
 These are less useful in this context, but underlying PlaceholderResolver can resolve them, so they are documented here for completeness:
 
