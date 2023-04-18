@@ -65,7 +65,7 @@ template_tab.appendTextField("template","Sub-Tag Template","{input_tag}|{kind_fr
 
 # Have guide to what placeholders are supported built right in next to template input
 placeholder_guide_text =<<GUIDE
-{input_tag} - The specified input tag which brought found this item for processing by this script.
+{input_tag} - The specified input tag which this item was responsive to.
 {type} - The item's type name as obtained by ItemType.getLocalisedName
 {mime_type} - The item's mime type as obtained by ItemType.getName
 {kind} - The item's kind name as obtained by ItemType.getKind.getName
@@ -86,6 +86,8 @@ placeholder_guide_text =<<GUIDE
                        items where Nuix does not have an original extension value.
 {corrected_extension} - The corrected extension as obtained from Nuix via Item.getCorrectedExtension or NO_CORRECTED_EXTENSION for
                         items where Nuix does not have a corrected extension value.
+{case_id} - The value obtained by calling Item.getCaseId which "Gets the case ID for the simple case that processed this item".
+{case_name} - The value obtained by calling Item.getCaseName which gets the name of the simple case the item belongs to.
 
 Less useful, but underlying logic can resolve them, so they are documented here for completeness:
 
@@ -147,6 +149,8 @@ if dialog.getDialogResult == true
 				pr.setFromItem(item)
 				pr.set("input_tag",tag)
 				pr.set("kind_friendly",item.getKind.getLocalisedName)
+				pr.set("case_id",item.getCaseId)
+				pr.set("case_name",item.getCaseName)
 
 				resolved_tag = pr.resolveTemplate(template)
 				tag_batches[resolved_tag] << item
